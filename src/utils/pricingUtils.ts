@@ -6,11 +6,11 @@ export const calculatePricing = (data: PricingData) => {
   const discountAmount = (data.productCost * data.supplierDiscount) / 100;
   const costWithDiscount = data.productCost - discountAmount;
 
+  // Cálculo dos impostos sobre o custo do produto (não sobre o preço base)
+  const totalTaxes = (costWithDiscount * data.taxes) / 100;
+
   // Preço base com margem de lucro
   const basePrice = costWithDiscount * (1 + data.profitMargin / 100);
-
-  // Cálculo dos impostos sobre o preço base
-  const totalTaxes = (basePrice * data.taxes) / 100;
 
   // Despesas fixas
   const totalFixedExpenses = data.fixedExpenses;
