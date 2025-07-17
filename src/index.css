@@ -6,7 +6,7 @@
 
 @layer base {
   :root {
-    /* Paleta de cores baseada nos requisitos */
+    /* Cores principais baseadas no design */
     --background: 174 50% 94%; /* Verde menta suave (#E6F3F0) */
     --foreground: 220 27% 22%; /* Cinza escuro (#2D3748) */
 
@@ -16,7 +16,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 220 27% 22%;
 
-    --primary: 174 46% 64%; /* Verde suave (#7DD3C0) */
+    --primary: 200 100% 79%; /* #00C9FF */
     --primary-foreground: 0 0% 100%;
 
     --secondary: 174 50% 94%; /* Verde menta suave para secundário */
@@ -25,7 +25,7 @@
     --muted: 174 25% 96%; /* Versão mais sutil do background */
     --muted-foreground: 217 12% 51%; /* Cinza médio (#718096) */
 
-    --accent: 174 46% 64%; /* Verde suave para acentos */
+    --accent: 146 100% 79%; /* #92FE9D */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -33,7 +33,7 @@
 
     --border: 174 25% 88%;
     --input: 174 25% 88%;
-    --ring: 174 46% 64%;
+    --ring: 200 100% 79%;
 
     /* Aumento do radius para bordas muito arredondadas */
     --radius: 1.25rem; /* 20px */
@@ -41,6 +41,11 @@
     /* Verde escuro para valores monetários */
     --success: 142 69% 36%; /* Verde escuro (#2F855A) */
     --success-foreground: 0 0% 100%;
+    
+    /* Gradientes principais */
+    --gradient-primary: linear-gradient(135deg, hsl(226 58% 65%), hsl(261 42% 59%));
+    --gradient-accent: linear-gradient(45deg, hsl(200 100% 79%), hsl(146 100% 79%));
+    --gradient-card: linear-gradient(45deg, hsl(24 100% 69%), hsl(36 100% 63%));
 
     --sidebar-background: 0 0% 98%;
 

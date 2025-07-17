@@ -64,106 +64,119 @@ const LandingPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background font-sans">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5 text-[20rem] font-bold text-primary select-none pointer-events-none overflow-hidden">
-        <div className="absolute top-20 -left-32 rotate-12">PREÇO</div>
-        <div className="absolute bottom-32 -right-24 -rotate-12">LUCRO</div>
-      </div>
-
-      {/* Hero Section com Dashboard Mockup */}
-      <section className="relative py-16 px-4 overflow-hidden">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Conteúdo Principal */}
-            <div className="space-y-8">
-              <div className="space-y-6">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-                  Pare de{" "}
-                  <span className="text-primary relative">
-                    Precificar no Escuro
-                    <div className="absolute -bottom-2 left-0 w-full h-3 bg-primary/20 -z-10 rounded-lg"></div>
-                  </span>
-                </h1>
-                <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-                  A calculadora de precificação que transforma suas dúvidas em preços lucrativos e competitivos
-                </p>
+    <div className="min-h-screen font-sans" style={{ background: 'var(--gradient-primary)' }}>
+      {/* Hero Section Container */}
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="max-w-md mx-auto">
+          {/* Container principal com glassmorphism */}
+          <div className="bg-white/95 backdrop-blur-md rounded-3xl p-8 shadow-xl border border-white/20">
+            
+            {/* Header */}
+            <div className="text-center mb-8">
+              <div className="inline-block mb-5" style={{ background: 'var(--gradient-accent)' }}>
+                <span className="text-white px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wide">
+                  ✨ Ferramenta Gratuita
+                </span>
               </div>
+              
+              <h1 className="text-3xl font-bold text-foreground leading-tight mb-3">
+                Descubra o{" "}
+                <span className="text-primary">Preço Ideal</span>
+                <br />
+                para Seu Negócio em 30 Segundos
+              </h1>
+              
+              <p className="text-muted-foreground leading-relaxed">
+                A calculadora inteligente que transforma suas dúvidas em preços lucrativos e competitivos. Usada por +5.000 empreendedores.
+              </p>
+            </div>
 
-              {/* Financial Dashboard Highlight */}
-              <div className="bg-card border border-primary/20 rounded-3xl p-6 shadow-lg">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center">
-                    <DollarSign className="h-4 w-4 text-primary" />
-                  </div>
-                  <h3 className="font-semibold text-foreground">Total Balance</h3>
-                </div>
-                <div className="space-y-2">
-                  <div className="text-3xl font-bold text-success">R$ 24.580,50</div>
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <TrendingUp className="h-4 w-4 text-success" />
-                    <span>+12,5% em relação ao mês anterior</span>
-                  </div>
-                </div>
+            {/* Stats */}
+            <div className="flex justify-around mb-8 p-5 bg-primary/5 rounded-2xl">
+              <div className="text-center">
+                <span className="block text-xl font-bold text-primary">+5.000</span>
+                <span className="text-xs text-muted-foreground">Usuários</span>
               </div>
-
-              {/* CTA Principal */}
-              <div className="space-y-4">
-                <Link to="/calculadora">
-                  <Button 
-                    size="lg" 
-                    className="text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 bg-primary hover:bg-primary/90"
-                  >
-                    <Calculator className="mr-2 h-5 w-5" />
-                    Calcular Meu Preço Agora
-                  </Button>
-                </Link>
-                <p className="text-sm text-muted-foreground">
-                  ✅ Gratuito • ✅ Sem cadastro • ✅ Resultado instantâneo
-                </p>
+              <div className="text-center">
+                <span className="block text-xl font-bold text-primary">98%</span>
+                <span className="text-xs text-muted-foreground">Satisfação</span>
+              </div>
+              <div className="text-center">
+                <span className="block text-xl font-bold text-primary">30s</span>
+                <span className="text-xs text-muted-foreground">Resultado</span>
               </div>
             </div>
 
-            {/* Dashboard Mockup */}
-            <div className="space-y-6">
-              {/* Action Icons Grid */}
-              <div className="grid grid-cols-4 gap-4">
-                {actionIcons.map((action, index) => (
-                  <Card key={index} className="p-4 text-center hover:shadow-md transition-all rounded-3xl border-0 shadow-sm">
-                    <div className={`w-12 h-12 ${action.color} rounded-full flex items-center justify-center mx-auto mb-2`}>
-                      <action.icon className="h-5 w-5 text-primary" />
-                    </div>
-                    <p className="text-xs font-medium text-foreground">{action.title}</p>
-                  </Card>
-                ))}
+            {/* Balance Card */}
+            <div className="bg-white rounded-2xl p-6 shadow-lg mb-8 border border-primary/10">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: 'var(--gradient-accent)' }}>
+                  <span className="text-white text-lg">💰</span>
+                </div>
+                <h3 className="font-semibold text-muted-foreground">Seu Preço Ideal</h3>
               </div>
-
-              {/* Contacts List */}
-              <Card className="p-6 rounded-3xl border-0 shadow-lg">
-                <div className="flex items-center justify-between mb-4">
-                  <h4 className="font-semibold text-foreground">Transações Recentes</h4>
-                  <RefreshCw className="h-4 w-4 text-muted-foreground" />
-                </div>
-                <div className="space-y-4">
-                  {contacts.map((contact, index) => (
-                    <div key={index} className="flex items-center justify-between">
-                      <div className="flex items-center gap-3">
-                        <div className={`w-10 h-10 ${contact.color} rounded-full flex items-center justify-center text-sm font-semibold text-primary`}>
-                          {contact.avatar}
-                        </div>
-                        <div>
-                          <p className="font-medium text-foreground text-sm">{contact.name}</p>
-                          <p className="text-xs text-muted-foreground">{contact.time} atrás</p>
-                        </div>
-                      </div>
-                      <div className="text-right">
-                        <p className="font-semibold text-success">{contact.value}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </Card>
+              <div className="text-3xl font-bold text-success mb-2">R$ 24.580,50</div>
+              <div className="flex items-center gap-2 text-sm text-success">
+                <span>📈</span>
+                <span>+12,5% de margem otimizada</span>
+              </div>
             </div>
+
+            {/* Testimonial */}
+            <div className="bg-success/5 rounded-2xl p-5 mb-6 border-l-4 border-l-success">
+              <p className="text-sm text-muted-foreground italic mb-3">
+                "Aumentei meu faturamento em 40% só ajustando os preços com base na calculadora. Incrível!"
+              </p>
+              <p className="text-sm font-semibold text-success">
+                - Maria Silva, E-commerce
+              </p>
+            </div>
+
+            {/* CTA Principal */}
+            <Link to="/calculadora">
+              <Button 
+                size="lg" 
+                className="w-full text-base py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 mb-5"
+                style={{ background: 'var(--gradient-accent)' }}
+              >
+                <span>🚀</span>
+                Calcular Meu Preço Ideal Agora
+              </Button>
+            </Link>
+
+            {/* Features */}
+            <div className="flex justify-center gap-5 text-sm text-success font-medium mb-5">
+              <div className="flex items-center gap-1">
+                <span>✅</span>
+                <span>Gratuito</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <span>✅</span>
+                <span>Sem Cadastro</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <span>✅</span>
+                <span>Resultado Instantâneo</span>
+              </div>
+            </div>
+
+            {/* Urgency */}
+            <div className="text-center mb-5">
+              <div 
+                className="text-white px-5 py-3 rounded-xl text-sm font-semibold animate-pulse" 
+                style={{ background: 'var(--gradient-card)' }}
+              >
+                ⚡ Mais de 200 pessoas usaram hoje!
+              </div>
+            </div>
+
+            {/* Secondary CTA */}
+            <div className="text-center">
+              <a href="#" className="text-primary text-sm font-medium hover:underline">
+                Ver exemplo de cálculo completo →
+              </a>
+            </div>
+
           </div>
         </div>
       </section>
