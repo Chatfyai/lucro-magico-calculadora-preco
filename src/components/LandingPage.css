@@ -1,0 +1,86 @@
+/* Paleta de Cores - Calculadora de Preços */
+
+/* 🔵 Cores Principais */
+:root {
+  --azul-corporativo-escuro: #0f172a;
+  --azul-acinzentado: #1e293b;
+  --azul-confianca: #06b6d4;
+  
+  /* 💚 Sucesso & Lucro */
+  --verde-sucesso: #10b981;
+  --verde-lucro: #059669;
+  --verde-claro-bg: #dcfce7;
+  
+  /* ⚠️ Atenção & Alerta */
+  --laranja-atencao: #f59e0b;
+  --laranja-escuro: #d97706;
+  --amarelo-claro-bg: #fef3c7;
+  
+  /* 🚨 Prejuízo & Perigo */
+  --vermelho-prejuizo: #ef4444;
+  --vermelho-escuro: #dc2626;
+  --vermelho-claro-bg: #fee2e2;
+  
+  /* ⚪ Neutras & Estruturais */
+  --branco-suave: #f8fafc;
+  --cinza-claro: #e2e8f0;
+  --cinza-texto: #64748b;
+  
+  /* ✨ Destaques & CTAs */
+  --roxo-premium: #8b5cf6;
+  --roxo-escuro: #7c3aed;
+  --roxo-claro-bg: #f3e8ff;
+}
+
+/* Classes utilitárias */
+.bg-azul-corporativo { background-color: var(--azul-corporativo-escuro); }
+.bg-azul-acinzentado { background-color: var(--azul-acinzentado); }
+.bg-azul-confianca { background-color: var(--azul-confianca); }
+
+.bg-verde-sucesso { background-color: var(--verde-sucesso); }
+.bg-verde-lucro { background-color: var(--verde-lucro); }
+.bg-verde-claro { background-color: var(--verde-claro-bg); }
+
+.bg-laranja-atencao { background-color: var(--laranja-atencao); }
+.bg-laranja-escuro { background-color: var(--laranja-escuro); }
+.bg-amarelo-claro { background-color: var(--amarelo-claro-bg); }
+
+.bg-vermelho-prejuizo { background-color: var(--vermelho-prejuizo); }
+.bg-vermelho-escuro { background-color: var(--vermelho-escuro); }
+.bg-vermelho-claro { background-color: var(--vermelho-claro-bg); }
+
+.bg-branco-suave { background-color: var(--branco-suave); }
+.bg-cinza-claro { background-color: var(--cinza-claro); }
+.bg-roxo-premium { background-color: var(--roxo-premium); }
+.bg-roxo-escuro { background-color: var(--roxo-escuro); }
+.bg-roxo-claro { background-color: var(--roxo-claro-bg); }
+
+.text-azul-corporativo { color: var(--azul-corporativo-escuro); }
+.text-azul-acinzentado { color: var(--azul-acinzentado); }
+.text-azul-confianca { color: var(--azul-confianca); }
+
+.text-verde-sucesso { color: var(--verde-sucesso); }
+.text-verde-lucro { color: var(--verde-lucro); }
+
+.text-laranja-atencao { color: var(--laranja-atencao); }
+.text-laranja-escuro { color: var(--laranja-escuro); }
+
+.text-vermelho-prejuizo { color: var(--vermelho-prejuizo); }
+.text-vermelho-escuro { color: var(--vermelho-escuro); }
+
+.text-cinza-texto { color: var(--cinza-texto); }
+.text-roxo-premium { color: var(--roxo-premium); }
+.text-roxo-escuro { color: var(--roxo-escuro); }
+
+.border-azul-confianca { border-color: var(--azul-confianca); }
+.border-verde-sucesso { border-color: var(--verde-sucesso); }
+.border-laranja-atencao { border-color: var(--laranja-atencao); }
+.border-vermelho-prejuizo { border-color: var(--vermelho-prejuizo); }
+.border-roxo-premium { border-color: var(--roxo-premium); }
+
+/* Efeito marca-texto amarelo */
+.marca-texto-amarelo {
+  background: #fef3c7;
+  padding: 2px 4px;
+  border-radius: 2px;
+} 

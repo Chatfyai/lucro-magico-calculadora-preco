@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import './LandingPage.css';
 import { 
   Calculator, 
   TrendingUp, 
@@ -49,13 +50,13 @@ const LandingPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-branco-suave">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary/10 via-background to-accent/10">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-azul-confianca/10 via-branco-suave to-roxo-premium/10">
         {/* Background Decorations */}
         <div className="absolute inset-0 bg-grid-black/[0.02] bg-[size:60px_60px]" />
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse delay-1000" />
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-azul-confianca/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-roxo-premium/10 rounded-full blur-3xl animate-pulse delay-1000" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -63,25 +64,25 @@ const LandingPage = () => {
             {/* Left Column - Content */}
             <div className="space-y-8">
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20">
-                <Rocket className="w-4 h-4 text-primary" />
-                <span className="text-sm font-semibold text-primary">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-roxo-claro rounded-full border border-roxo-premium">
+                <Rocket className="w-4 h-4 text-roxo-premium" />
+                <span className="text-sm font-semibold text-roxo-premium">
                   Ferramenta Nº1 em Precificação
                 </span>
               </div>
 
               {/* Main Headline */}
               <div className="space-y-4">
-                <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight">
+                <h1 className="text-4xl md:text-6xl font-bold text-azul-corporativo leading-tight">
                   Descubra o{" "}
-                  <span className="text-primary bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                  <span className="text-roxo-premium marca-texto-amarelo">
                     Preço Ideal
                   </span>
                   <br />
                   em 30 Segundos
                 </h1>
                 
-                <p className="text-xl text-muted-foreground max-w-lg leading-relaxed">
+                <p className="text-xl text-cinza-texto max-w-lg leading-relaxed">
                   A calculadora inteligente que elimina a incerteza e maximiza seus lucros. 
                   Transforme dúvidas em decisões confiantes.
                 </p>
@@ -90,16 +91,16 @@ const LandingPage = () => {
               {/* Social Proof Stats */}
               <div className="flex items-center gap-8">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">+5.000</div>
-                  <div className="text-sm text-muted-foreground">Empreendedores</div>
+                  <div className="text-2xl font-bold text-roxo-premium">+5.000</div>
+                  <div className="text-sm text-cinza-texto">Empreendedores</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">98%</div>
-                  <div className="text-sm text-muted-foreground">Satisfação</div>
+                  <div className="text-2xl font-bold text-roxo-premium">98%</div>
+                  <div className="text-sm text-cinza-texto">Satisfação</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">30s</div>
-                  <div className="text-sm text-muted-foreground">Para Resultado</div>
+                  <div className="text-2xl font-bold text-roxo-premium">30s</div>
+                  <div className="text-sm text-cinza-texto">Para Resultado</div>
                 </div>
               </div>
 
@@ -108,7 +109,7 @@ const LandingPage = () => {
                 <Link to="/calculadora">
                   <Button 
                     size="lg" 
-                    className="w-full sm:w-auto text-lg px-8 py-6 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
+                    className="w-full sm:w-auto text-lg px-8 py-6 bg-roxo-premium hover:bg-roxo-escuro text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
                   >
                     <Calculator className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                     Calcular Preço Ideal
@@ -116,28 +117,21 @@ const LandingPage = () => {
                   </Button>
                 </Link>
                 
-                <Button 
-                  variant="outline" 
-                  size="lg"
-                  className="w-full sm:w-auto text-lg px-8 py-6 rounded-xl border-2 hover:bg-muted/50 transition-all duration-300 group"
-                >
-                  <PlayCircle className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-                  Ver Demo
-                </Button>
+
               </div>
 
               {/* Trust Indicators */}
-              <div className="flex items-center gap-6 text-sm text-muted-foreground">
+              <div className="flex items-center gap-6 text-sm text-cinza-texto">
                 <div className="flex items-center gap-1">
-                  <CheckCircle className="h-4 w-4 text-green-500" />
+                  <CheckCircle className="h-4 w-4 text-verde-sucesso" />
                   100% Gratuito
                 </div>
                 <div className="flex items-center gap-1">
-                  <CheckCircle className="h-4 w-4 text-green-500" />
+                  <CheckCircle className="h-4 w-4 text-verde-sucesso" />
                   Sem Cadastro
                 </div>
                 <div className="flex items-center gap-1">
-                  <Timer className="h-4 w-4 text-green-500" />
+                  <Timer className="h-4 w-4 text-verde-sucesso" />
                   Resultado Instantâneo
                 </div>
               </div>
@@ -146,40 +140,26 @@ const LandingPage = () => {
             {/* Right Column - Visual Elements */}
             <div className="relative">
               {/* Main Card - Calculator Preview */}
-              <div className="bg-card/80 backdrop-blur-lg rounded-3xl p-8 shadow-2xl border border-border/50 transform rotate-3 hover:rotate-0 transition-transform duration-500">
+              <div className="bg-white/80 backdrop-blur-lg rounded-3xl p-8 shadow-2xl border border-cinza-claro transform rotate-3 hover:rotate-0 transition-transform duration-500">
                 
                 {/* Header */}
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center">
-                    <Calculator className="h-6 w-6 text-primary" />
+                  <div className="w-12 h-12 bg-roxo-claro rounded-xl flex items-center justify-center">
+                    <Calculator className="h-6 w-6 text-roxo-premium" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground">Calculadora de Preços</h3>
-                    <p className="text-sm text-muted-foreground">Resultado instantâneo</p>
+                    <h3 className="font-semibold text-azul-corporativo">Calculadora de Preços</h3>
+                    <p className="text-sm text-cinza-texto">Resultado instantâneo</p>
                   </div>
                 </div>
 
-                {/* Mock Form Fields */}
-                <div className="space-y-4 mb-6">
-                  <div>
-                    <label className="text-sm text-muted-foreground">Custo do Produto</label>
-                    <div className="bg-muted/50 rounded-lg p-3 mt-1">
-                      <span className="text-foreground font-medium">R$ 50,00</span>
-                    </div>
-                  </div>
-                  <div>
-                    <label className="text-sm text-muted-foreground">Margem Desejada</label>
-                    <div className="bg-muted/50 rounded-lg p-3 mt-1">
-                      <span className="text-foreground font-medium">40%</span>
-                    </div>
-                  </div>
-                </div>
+
 
                 {/* Result */}
-                <div className="bg-primary/10 rounded-xl p-4 border border-primary/20">
-                  <div className="text-sm text-muted-foreground mb-1">Preço Ideal Sugerido</div>
-                  <div className="text-3xl font-bold text-primary">R$ 125,00</div>
-                  <div className="flex items-center gap-1 text-sm text-green-600 mt-2">
+                <div className="bg-verde-claro rounded-xl p-4 border border-verde-sucesso">
+                  <div className="text-sm text-cinza-texto mb-1">Preço Ideal Sugerido</div>
+                  <div className="text-3xl font-bold text-verde-lucro">R$ 125,00</div>
+                  <div className="flex items-center gap-1 text-sm text-verde-sucesso mt-2">
                     <TrendingUp className="h-4 w-4" />
                     <span>+150% lucro otimizado</span>
                   </div>
@@ -187,11 +167,11 @@ const LandingPage = () => {
               </div>
 
               {/* Floating Elements */}
-              <div className="absolute -top-6 -right-6 bg-green-500 text-white p-3 rounded-full shadow-lg animate-bounce">
+              <div className="absolute -top-6 -right-6 bg-verde-sucesso text-white p-3 rounded-full shadow-lg animate-bounce">
                 <Award className="h-6 w-6" />
               </div>
               
-              <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-3 rounded-full shadow-lg animate-pulse">
+              <div className="absolute -bottom-6 -left-6 bg-roxo-premium text-white p-3 rounded-full shadow-lg animate-pulse">
                 <Zap className="h-6 w-6" />
               </div>
             </div>
@@ -199,23 +179,23 @@ const LandingPage = () => {
 
           {/* Testimonial Quote */}
           <div className="mt-16 text-center">
-            <div className="max-w-2xl mx-auto bg-card/50 backdrop-blur-sm rounded-2xl p-8 border border-border/50">
+            <div className="max-w-2xl mx-auto bg-white/50 backdrop-blur-sm rounded-2xl p-8 border border-cinza-claro">
               <div className="flex justify-center mb-4">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                  <Star key={i} className="h-5 w-5 text-laranja-atencao fill-current" />
                 ))}
               </div>
-              <blockquote className="text-lg text-muted-foreground italic mb-4">
+              <blockquote className="text-lg text-cinza-texto italic mb-4">
                 "Aumentei meu faturamento em 40% só ajustando os preços com base na calculadora. 
                 A ferramenta é incrível e muito fácil de usar!"
               </blockquote>
               <div className="flex items-center justify-center gap-3">
-                <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center text-sm font-semibold text-primary">
+                <div className="w-10 h-10 bg-roxo-claro rounded-full flex items-center justify-center text-sm font-semibold text-roxo-premium">
                   MS
                 </div>
                 <div className="text-left">
-                  <div className="font-semibold text-foreground">Maria Silva</div>
-                  <div className="text-sm text-muted-foreground">E-commerce Owner</div>
+                  <div className="font-semibold text-azul-corporativo">Maria Silva</div>
+                  <div className="text-sm text-cinza-texto">E-commerce Owner</div>
                 </div>
               </div>
             </div>
@@ -224,34 +204,34 @@ const LandingPage = () => {
       </section>
 
       {/* Pain Points Section */}
-      <section className="py-20 px-4 bg-muted/30">
+      <section className="py-20 px-4 bg-cinza-claro">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-azul-corporativo mb-4">
               Reconhece Alguma Dessas Situações?
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-cinza-texto max-w-2xl mx-auto">
               Você não está sozinho. Essas são as principais dores de quem precifica produtos
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {painPoints.map((pain, index) => (
-              <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-l-4 border-l-destructive/50 rounded-2xl overflow-hidden">
+              <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-l-4 border-l-laranja-atencao rounded-2xl overflow-hidden bg-white">
                 <CardHeader className="pb-4">
                   <CardTitle className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-destructive/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                      <pain.icon className="h-6 w-6 text-destructive" />
+                    <div className="w-12 h-12 bg-laranja-atencao/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                      <pain.icon className="h-6 w-6 text-laranja-atencao" />
                     </div>
-                    <h3 className="text-lg font-semibold text-foreground leading-tight">
+                    <h3 className="text-lg font-semibold text-azul-corporativo leading-tight">
                       {pain.title}
                     </h3>
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <p className="text-muted-foreground">{pain.description}</p>
-                  <div className="bg-destructive/5 p-4 rounded-xl border border-destructive/10">
-                    <p className="text-sm text-muted-foreground italic">
+                  <p className="text-cinza-texto">{pain.description}</p>
+                  <div className="bg-amarelo-claro p-4 rounded-xl border border-laranja-atencao/20">
+                    <p className="text-sm text-cinza-texto italic">
                       💡 {pain.example}
                     </p>
                   </div>
